@@ -15,6 +15,7 @@
 		BCACC9322BACEE2A003F5D4B /* mealdbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9312BACEE2A003F5D4B /* mealdbUITests.swift */; };
 		BCACC9342BACEE2A003F5D4B /* mealdbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9332BACEE2A003F5D4B /* mealdbUITestsLaunchTests.swift */; };
 		BCACC9412BACF09D003F5D4B /* MealsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9402BACF09C003F5D4B /* MealsResponse.swift */; };
+		BCACC9452BAD0A97003F5D4B /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9442BAD0A96003F5D4B /* MealDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		BCACC9312BACEE2A003F5D4B /* mealdbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealdbUITests.swift; sourceTree = "<group>"; };
 		BCACC9332BACEE2A003F5D4B /* mealdbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealdbUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BCACC9402BACF09C003F5D4B /* MealsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsResponse.swift; sourceTree = "<group>"; };
+		BCACC9442BAD0A96003F5D4B /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				BCACC91A2BACEE2A003F5D4B /* Assets.xcassets */,
 				BCACC91C2BACEE2A003F5D4B /* Preview Content */,
 				BCACC9402BACF09C003F5D4B /* MealsResponse.swift */,
+				BCACC9442BAD0A96003F5D4B /* MealDetailsView.swift */,
 			);
 			path = mealdb;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCACC9452BAD0A97003F5D4B /* MealDetailsView.swift in Sources */,
 				BCACC9412BACF09D003F5D4B /* MealsResponse.swift in Sources */,
 				BCACC9192BACEE28003F5D4B /* ContentView.swift in Sources */,
 				BCACC9172BACEE28003F5D4B /* mealdbApp.swift in Sources */,
