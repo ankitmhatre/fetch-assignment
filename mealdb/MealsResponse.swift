@@ -13,63 +13,39 @@ import Foundation
 
 
 struct MealsResponse: Codable {
-    let meals: [Meal]
+    var meals: [Meal]
 }
 
 
 
 
-struct Meal:  Identifiable , Codable {
-    let id: UUID
-    let strMeal: String
-    let strMealThumb: String
-    let idMeal: String
+struct Meal: Codable {
+    var strMeal: String
+    var strMealThumb: URL
+    var idMeal: Int
     
+    private enum CodingKeys: String, CodingKey {
+        case strMeal, strMealThumb, idMeal
+    }
     
-    init(id: UUID = UUID(), strMeal: String, strMealThumb: String, idMeal:String) {
-           self.id = id
-           self.strMeal = strMeal
-           self.strMealThumb = strMealThumb
-        self.idMeal = idMeal
-           // Initialize other properties if any
-       }
-    
-}
-
-enum NetworkError: Error {
-    case badUrl
-    case invalidRequest
-    case badResponse
-    case badStatus
-    case failedToDecodeResponse
-}
-
-
-class WebService: Codable {
-    func downloadData<T: Codable>(fromURL: String) async -> T? {
-        do {
-            guard let url = URL(string: fromURL) else { throw NetworkError.badUrl }
-            let (data, response) = try await URLSession.shared.data(from: url)
-            print(data)
-            guard let response = response as? HTTPURLResponse else { throw NetworkError.badResponse }
-            guard response.statusCode >= 200 && response.statusCode < 300 else { throw NetworkError.badStatus }
-            print("Helloooooooooooo")
-           
-            guard let decodedResponse = try? JSONDecoder().decode(T.self, from: data) else { throw NetworkError.failedToDecodeResponse }
-            
-            return decodedResponse
-        } catch NetworkError.badUrl {
-            print("There was an error creating the URL")
-        } catch NetworkError.badResponse {
-            print("Did not get a valid response")
-        } catch NetworkError.badStatus {
-            print("Did not get a 2xx status code from the response")
-        } catch NetworkError.failedToDecodeResponse {
-            print("Failed to decode response into the given type")
-        } catch {
-            print("An error occured downloading the data")
-        }
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        strMeal = try container.decode(String.self, forKey: .strMeal)
+        strMealThumb = try container.decode(URL.self, forKey: .strMealThumb)
         
-        return nil
+        // Decode idMeal as String and convert it to Int
+        if let idMealString = try? container.decode(String.self, forKey: .idMeal),
+           let idMealInt = Int(idMealString) {
+            idMeal = idMealInt
+        } else {
+            // If conversion fails, set a default value or throw an error
+            // For example, setting a default value of 0
+            idMeal = 0
+            // Or you can throw an error if conversion fails
+            // throw DecodingError.dataCorruptedError(forKey: .idMeal, in: container, debugDescription: "Invalid idMeal value")
+        }
     }
 }
+
+
+

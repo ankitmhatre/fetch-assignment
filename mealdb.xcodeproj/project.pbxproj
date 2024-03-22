@@ -14,6 +14,7 @@
 		BCACC9282BACEE2A003F5D4B /* mealdbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9272BACEE2A003F5D4B /* mealdbTests.swift */; };
 		BCACC9322BACEE2A003F5D4B /* mealdbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9312BACEE2A003F5D4B /* mealdbUITests.swift */; };
 		BCACC9342BACEE2A003F5D4B /* mealdbUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9332BACEE2A003F5D4B /* mealdbUITestsLaunchTests.swift */; };
+		BCACC9412BACF09D003F5D4B /* MealsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCACC9402BACF09C003F5D4B /* MealsResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BCACC92D2BACEE2A003F5D4B /* mealdbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mealdbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCACC9312BACEE2A003F5D4B /* mealdbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealdbUITests.swift; sourceTree = "<group>"; };
 		BCACC9332BACEE2A003F5D4B /* mealdbUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mealdbUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BCACC9402BACF09C003F5D4B /* MealsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				BCACC9182BACEE28003F5D4B /* ContentView.swift */,
 				BCACC91A2BACEE2A003F5D4B /* Assets.xcassets */,
 				BCACC91C2BACEE2A003F5D4B /* Preview Content */,
+				BCACC9402BACF09C003F5D4B /* MealsResponse.swift */,
 			);
 			path = mealdb;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCACC9412BACF09D003F5D4B /* MealsResponse.swift in Sources */,
 				BCACC9192BACEE28003F5D4B /* ContentView.swift in Sources */,
 				BCACC9172BACEE28003F5D4B /* mealdbApp.swift in Sources */,
 			);
@@ -430,6 +434,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +464,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
